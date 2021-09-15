@@ -1,0 +1,17 @@
+{
+    "taskDefinition": "eureka:1",
+    "cluster": "eureka-cluster",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-west-2:975230531453:targetgroup/eureka-tg-a/a4ef8531833a4265",
+            "containerName": "eureka",
+            "containerPort": 80
+        }
+    ],
+    "desiredCount": 1,
+    "launchType": "EC2",
+    "schedulingStrategy": "REPLICA",
+    "deploymentController": {
+        "type": "CODE_DEPLOY"
+    }
+}
